@@ -1,0 +1,83 @@
+#This is the testsuite for pronoun implementation within XLE+Glue for the master's thesis by Farai Grenzdörffer 2024.
+
+
+
+## Regular sentences. Proper names, nouns, intransitive and transitive sentences, present and past tense.
+
+A woman appears.  (1 0.008 23)
+
+A man sees a bear. (1 0.003 33)
+
+Shauna cooks.  (1 0.003 25)
+
+Jeff hugged Shauna.  (1 0.003 37)
+
+A woman appeared. (1 0.002 23)
+
+# multi sentence constructions
+
+Jeff saw a woman. & Shauna cooked a rabbit. (1 0.003 73)
+
+A bear appears. & A man sees the bear. (1 0.003 59)
+
+
+
+## Simple personal pronouns. Gender information is matched
+
+A woman appears. & She laughs. (1 0.003 42)
+
+Misty appears. & She laughs. (1 0.003 44)
+
+### These two should not work due to gender mismatch.
+
+A woman appears. & He laughs. (1 0.003 42)
+
+Ben appears. & She laughs. (1 0.002 44)
+
+# 'She' should resolve to 'woman' in all cases
+
+A woman saw a man. & She smiled. (0 0.002 0)
+
+A man saw a woman. & She smiled. (0 0.001 0)
+
+A woman saw a bear. & She smiled. (0 0.001 0)
+
+A woman saw a bear. & She hugged Ben. (1 0.002 64)
+
+# Pronouns in the accusative
+
+A woman appears. & Ben sees her. (1 0.003 54)
+
+Misty appears. & Ben sees her.  (1 0.002 56)
+
+### These two should not resolve due to gender and phrasal structure mismatch.
+
+A woman appears. & Ben sees him. (1 0.003 54)
+
+Ben appears. & Misty sees her. (1 0.005 56)
+
+
+
+## Reflexive pronouns.
+
+Shauna hugged herself. (1 0.002 28)
+
+A woman saw herself. (1 0.002 26)
+
+### These two should not resolve due to gender mismatch
+
+Shauna hugged himself. (1 0.002 28)
+
+A man saw herself. (1 0.002 26)
+
+# These two should resolve 'herself' with 'Misty'
+
+A woman appeared. & Misty hugged herself. (1 0.002 54)
+
+A man appeared. & Misty hugged herself. (1 0.002 54)
+
+### This should resolve 'she' with 'woman' and 'herself' with 'she'
+
+A woman appeared. & She hugged herself. (1 0.002 45)
+
+# 26 sentences, 0.068 CPU secs total, 0.008 CPU secs max (02/26/24)
