@@ -26,7 +26,7 @@ generateOntology(Formulas):-
 /*========================================================================
    Generating isa/2 relations
 ========================================================================*/
-%looking in both nouns and names for antecedents
+%looking in both nouns and names for antecedents (new)
 
 generateIsaNouns(I):-
    setof(isa(Hypo,Hyper),Words^lexicon(noun,Hypo,Words,Hyper),I).
