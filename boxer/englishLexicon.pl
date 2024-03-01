@@ -28,6 +28,7 @@ lexicon(det,_,[its],poss(nonhuman)).
    Nouns: lexicon(noun,Symbol,Words,{[],[Hypernym],Hypernym})
 ========================================================================*/
 
+% lexicon entries relevant for the testsuite
 
 lexicon(noun,human,[human],[organism]).
 lexicon(noun,female,[female],[human]).
@@ -50,82 +51,12 @@ lexicon(noun,cook,[cook],[act]).
 %'generic' antecedent
 %lexicon(noun,antecedent,[antecedent],female).
 
-
-/*
-lexicon(noun,princess,[princess],female).
-lexicon(noun,witch,[witch],[female]).
-lexicon(noun,wizard,[wizard],[male]).
-lexicon(noun,villain,[villain],human).
-lexicon(noun,troll,[troll],human).
-lexicon(noun,reeindeer,[reindeer],animal).
-lexicon(noun,sleigh,[sleigh],[vehicle]).
-lexicon(noun,snowman,[snowman],[organism]).
-lexicon(noun,sunbath,[sunbath],[act]).
-
-lexicon(noun,abstraction,[abstraction],[top]).
-lexicon(noun,act,[act],[top]).
-lexicon(noun,animal,[animal],[organism]).
-lexicon(noun,artifact,[artifact],[object]).
-lexicon(noun,beverage,[beverage],[food]).
-lexicon(noun,building,[building],[artifact]).
-lexicon(noun,container,[container],[instrumentality]).
-lexicon(noun,cup,[cup],[container]).
-lexicon(noun,device,[device],[instrumentality]).
-lexicon(noun,edible,[edible,food],[food]).
-lexicon(noun,bkburger,[big,kahuna,burger],[edible]).
-lexicon(noun,boxer,[boxer],human).
-lexicon(noun,boss,[boss],human).
-lexicon(noun,car,[car],[vehicle]).
-lexicon(noun,chainsaw,[chainsaw],[device]).
-lexicon(noun,criminal,[criminal],human).
-lexicon(noun,customer,[customer],human).
-lexicon(noun,drug,[drug],[artifact]).
-lexicon(noun,entity,[entity],[top]).
-lexicon(noun,episode,[episode],abstraction).
-lexicon(noun,female,[female],[human]).
-lexicon(noun,fdshake,[five,dollar,shake],[beverage]).
-lexicon(noun,food,[food],[object]).
-lexicon(noun,footmassage,[foot,massage],[act]).
-lexicon(noun,gimp,[gimp],human).
-lexicon(noun,glass,[glass],[container]).
-lexicon(noun,gun,[gun],[weaponry]).
-lexicon(noun,hammer,[hammer],[device]).
-lexicon(noun,hashbar,[hash,bar],[building]).
-lexicon(noun,human,[human],[organism]).
-lexicon(noun,husband,[husband],male).
-lexicon(noun,instrumentality,[instrumentality],artifact).
-lexicon(noun,joke,[joke],abstraction).
-lexicon(noun,man,[man],male).
-lexicon(noun,male,[male],[human]).
-lexicon(noun,medium,[medium],[instrumentality]).
-lexicon(noun,needle,[needle],[device]).
-lexicon(noun,object,[object],[entity]).
-lexicon(noun,organism,[organism],[entity]).
-lexicon(noun,owner,[owner],human).
-lexicon(noun,piercing,[piercing],[act]).
-lexicon(noun,plant,[plant],[organism]).
-lexicon(noun,qpwc,[quarter,pounder,with,cheese],[edible]).
-lexicon(noun,radio,[radio],[medium]).
-lexicon(noun,restaurant,[restaurant],[building]).
-lexicon(noun,robber,[robber],human).
-lexicon(noun,suitcase,[suitcase],[container]).
-lexicon(noun,shotgun,[shotgun],[weaponry]).
-lexicon(noun,sword,[sword],[weaponry]).
-lexicon(noun,vehicle,[vehicle],[instrumentality]).
-lexicon(noun,weaponry,[weaponry],[instrumentality]).
-lexicon(noun,woman,[woman],female).
-*/
   
 /*========================================================================
    Proper Names: lexicon(pn,Symbol,Words,{male,female})
 ========================================================================*/
-/*
-lexicon(pn,elsa,[elsa],female).
-lexicon(pn,anna,[anna],female).
-lexicon(pn,olaf,[olaf],male).
-lexicon(pn,christopher,[christopher],male).
-lexicon(pn,hans,[hans],male).
-*/
+%name entries relevant for the testsuite
+%capitalization and quotes are important 
 
 lexicon(pn,'Mary',['Mary'],female).
 lexicon(pn,'Misty',['Misty'],female).
@@ -135,23 +66,7 @@ lexicon(pn,'David',['David'],male).
 lexicon(pn,'Jeff',['Jeff'],male).
 lexicon(pn,'Ben',['Ben'],male).
 
-/*
-lexicon(pn,butch,[butch],male).
-lexicon(pn,honey_bunny,[honey,bunny],male).
-lexicon(pn,jimmy,[jimmy],male).
-lexicon(pn,jody,[jody],female).
-lexicon(pn,jules,[jules],male).
-lexicon(pn,lance,[lance],male).
-lexicon(pn,marsellus,[marsellus],male).
-lexicon(pn,marsellus,[marsellus,wallace],male).
-lexicon(pn,marvin,[marvin],male).
-lexicon(pn,mia,[mia],female).
-lexicon(pn,mia,[mia,wallace],female).
-lexicon(pn,pumpkin,[pumpkin],male).
-lexicon(pn,thewolf,[the,wolf],male).
-lexicon(pn,vincent,[vincent],male).
-lexicon(pn,vincent,[vincent,vega],male).
-*/
+
 
 /*========================================================================
    Intransitive Verbs: lexicon(iv,Symbol,Words,{fin,inf})
