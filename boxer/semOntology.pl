@@ -80,6 +80,8 @@ isa2fol([disjoint(S1,S2)|L],A1-[forall(X,imp(F1,not(F2)))|A2]):-
    Consistency Check
 ========================================================================*/
 
+% consistency definition to include both nouns and names, as well as codifying the inconsistency of female/male
+
 consistent(X,Y):-
    generateIsaNouns(I1),
    generateIsaNames(I2),
