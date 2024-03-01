@@ -45,7 +45,7 @@ mergeDrs(DrsA,DrsB,Resolved) :- resolveDrs([merge(DrsA,DrsB)]-[Resolved]).
 		   
 		   
 /*=====================================================================
-     Option for not resolving pronouns
+     Option for not resolving pronouns (new)
 =====================================================================*/		
 
 resolveOrNot([A]-[B]):-
@@ -54,7 +54,7 @@ resolveOrNot([A]-[B]):-
 	
 		   
 /*=====================================================================
-     Pronoun Resolution
+     Pronoun Resolution -- order edited slightly to fit in with the system
 =====================================================================*/
 
 resolveDrs([merge(B1,B2)|A1]-[drs(D,C)|A3]):-
@@ -109,7 +109,7 @@ resolveConds([],A-A).
 
 /*=====================================================================
      Unresolved Pronouns -- antecedent used for missing antecedent
-	 resolve normally until alfa expression
+	 resolve normally until alfa expression (new)
 =====================================================================*/
 
 noResolve([merge(B1,B2)|A1]-[drs(D,C)|A3]):-
@@ -123,10 +123,4 @@ noResolve([merge(B1,B2)|A1]-[drs(D,C)|A3]):-
 noResolve([alfa(Referent,nonrefl,_,merge(drs([D],[pred(Gender,D),eq(Referent,D)]),B1))|A1]-A2):-
 	mergeDrs(drs([],[pred(antecedent,Ant)]),merge(drs([D],[pred(Gender,D),eq(Ant,D)]),B1),C),
 	resolveDrs([C|A1]-A2).
-
-/*
-noResolve([alfa(Referent,nonrefl,_,B1)|A1]-A2):-
-	mergeDrs(drs([],[pred(antecedent,Referent)]),B1,C),
-	resolveDrs([C|A1]-A2).
-*/	
 
