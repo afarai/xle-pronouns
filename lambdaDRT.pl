@@ -37,7 +37,8 @@ drt2file(L,F) :- betaConvertList(L,L2),
   open(F,write,Stream),
   write(Stream,L2),
   close(Stream).
- 
+
+%added the option for no resolution
 betaConvertList([],[]).
   betaConvertList([H1|T1],[H2|T2]) :- betaConvert(H1,H2),
 				      resolveOrNot([H2]-[H3]),
